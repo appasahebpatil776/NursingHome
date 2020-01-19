@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import NursingHomeSystem.NursingHome.Entity.Login;
-import NursingHomeSystem.NursingHome.Entity.PatientCredentialInfo;
+import NursingHomeSystem.NursingHome.Entity.Patient.PatientCredentialInfo;
+
 
 @Controller
 public class LoginController {

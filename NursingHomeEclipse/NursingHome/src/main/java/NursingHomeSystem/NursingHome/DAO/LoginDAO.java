@@ -22,7 +22,7 @@ public class LoginDAO {
 		new BeanPropertyRowMapper<PatientPersonalInfo>(PatientPersonalInfo.class));
 */
 		
-		List<Login> demos = jdbcTemplate.query("select patientId, password from Login", 
+		List<Login> demos = jdbcTemplate.query("select emailId, password from Login", 
 				new BeanPropertyRowMapper<Login>(Login.class));
 		
 		return demos;

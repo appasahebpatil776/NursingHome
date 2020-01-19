@@ -1,0 +1,110 @@
+
+<!-- Page Content -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class=" col-lg-4">
+                <!-- Register Content -->
+                <div class="account-content">
+                    <div class="login-header">
+                        <h3>Patient Register </h3>
+                    </div>
+                        <!-- Register Form -->
+                        <form >
+                            <div class="form-group" >
+                                <label   > First Name</label>
+                                <input  required type="text" class="form-control "  >
+                            </div>
+                            <div class="form-group" >
+                                <label > Middle Name</label>
+                                <input required type="text" class="form-control ">
+                            </div>
+                            <div class="form-group" >
+                                <label> Last Name</label>
+                                <input required type="text" class="form-control ">
+                            </div>
+                            <div class="form-group">
+                                    <label>Gender</label>
+                                    <select class="custom-select" >
+                                      <option required selected>Select</option>
+                                      <option value="male">Male</option>
+                                      <option value="female">Female</option>
+                                      <option value="other">Other</option>
+                                    </select>
+                                    
+                                </div>
+                                
+                            
+                            <div class="form-group" >
+                                <p>DOB</p>
+                                <input required class="form-control " type="date" ng-model="dob">
+                            </div>
+                           
+                            <div class="form-group">
+                                <label>Blood Group</label>
+                                <select class="custom-select" >
+                                    <option  required selected>Select</option>
+                                    <option *ngFor="let bg of bloodgroup">{{bg}}</option>
+                                </select>
+                            </div>
+                            
+                        </form>
+                       
+                        <!-- /Register Form -->
+                   
+                </div>
+                <!-- /Register Content -->
+            </div>
+            <div class=" col-lg-4">
+                <pre>
+
+                </pre>
+                <div class="form-group">
+                        <label>Marital Status</label>
+                        <select class="custom-select" >
+                          <option required selected>Select</option>
+                          <option value="male">Single</option>
+                          <option value="female">Married</option>
+                          <option value="other">Divorced</option>
+                        </select>
+                        
+                    </div>
+                <div class="form-group" >
+                        <label > Mobile Number</label>
+                        <input required  type="text" name="phone" class="form-control ">
+                    </div>
+               
+                    <div class="form-group">
+                            <label for="exampleFormControlInput1">Email address</label>
+                            <input required type="email" class="form-control" id="exampleFormControlInput1" >
+                    </div>
+                <div class="form-group" >
+                    <label >Create Password</label>
+                    <input  required type="password" class="form-control ">
+                </div>
+                <div class="form-group" >
+                    <label >Confirm Password</label>
+                    <input required type="password" class="form-control ">
+                </div>
+                
+                
+            </div>
+            <div class=" col-lg-4 ">
+                <br>
+                <br>
+                <br>
+                <br>
+                <img src="assets/img/registration.png" style="width:500px;" class="img-fluid" alt="Doccure Register">	
+            </div>
+            <div class=" col-lg-4 ">         
+                    <button class="btn btn-primary btn-block btn-lg login-btn" type="submit"><a style="color: black;" href="login">Already have an account?</a></button>
+            </div>
+            <div class=" col-lg-4 ">
+                <button class="btn btn-primary btn-block btn-lg login-btn" style="color: black;" type="submit">Signup</button>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+
+<!-- /Page Content -->
