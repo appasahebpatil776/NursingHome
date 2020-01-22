@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,10 +9,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Doctor-Shreepad ENT Hosptital</title>
+<title>Patient List-Shreepad ENT Hosptital</title>
 </head>
 <body>
-<style>
+ <style>
          .content {
          max-width: 100%;
          margin: auto;
@@ -32,12 +30,12 @@
 <nav class="navbar navbar-dark bg-dark">
 <ul class="nav nav-tabs-fill">
   <li class="nav-item">
-    <a class="nav-link active" href="/home/doctorDashboard">Doctor</a>
+    <a class="nav-link active" href="#">Doctor</a>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Patient</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="/home/doctorDashboard/addPatient">Add Patient</a>
+      <a class="dropdown-item" href="#">Add Patient</a>
       <a class="dropdown-item" href="#">Patient List</a>
       <a class="dropdown-item" href="#">Add Document</a>
       <a class="dropdown-item" href="#">Document List</a>
@@ -103,5 +101,47 @@
   </li>
 </ul>
 </nav>
+<div  class="content">		
+		<button type="button" class="btn btn-success">Add Patient</button>
+		<table class="table">
+			  <thead>
+			    <tr>
+			      <th scope="col">SL.NO</th>
+			      <th scope="col">ID.NO</th>
+			      <th scope="col">First Name</th>
+			      <th scope="col">Last Name</th>
+			      <th scope="col">Email</th>
+			      <th scope="col">Phone NO.</th>
+			      <th scope="col">Mobile NO.</th>
+			      <th scope="col">Address</th>          
+			    </tr>
+			  </thead>
+			  <tbody>
+			     <tr>
+			      <th scope="row">1</th>
+			      <td>5000</td>
+			      <td>Appasaheb</td>
+			      <td>Nage</td>
+			      <td>appa776@gmail.com</td>
+			      <td>7666987654</td>
+			      <td>******</td>
+			      <td>MET_Bhujbal, Nashik</td>
+			    </tr> 
+			    </tbody>
+		</table>
+		<nav aria-label="Page navigation example">
+		  <ul class="pagination justify-content-end">
+		    <li class="page-item disabled">
+		      <a class="page-link" href="#" tabindex="-1">Previous</a>
+		    </li>
+		    <li class="page-item"><a class="page-link" href="#">1</a></li>
+		    <li class="page-item"><a class="page-link" href="#">2</a></li>
+		    <li class="page-item"><a class="page-link" href="#">3</a></li>
+		    <li class="page-item">
+		      <a class="page-link" href="#">Next</a>
+		    </li>
+  		</ul>
+	</nav>
+</div>
 </body>
 </html>

@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,19 +9,12 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Doctor-Shreepad ENT Hosptital</title>
+<title>Shreepad ENT Hosptital</title>
 </head>
 <body>
-<style>
-         .content {
-         max-width: 100%;
-         margin: auto;
-         background: white;
-         padding: 10px;
-         }
-      </style>
 <nav class="navbar navbar-light bg-light justify-content-between">
   <a class="navbar-brand"><img src ="./img/Webp.net-resizeimage (3).png"/></a>
+  <h1>DashBoard</h1>
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -31,54 +22,82 @@
 </nav>
 <nav class="navbar navbar-dark bg-dark">
 <ul class="nav nav-tabs-fill">
-  <li class="nav-item">
-    <a class="nav-link active" href="/home/doctorDashboard">Doctor</a>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Doctor</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Add Doctor</a>
+      <a class="dropdown-item" href="#">View Doctor List</a>
+        </div>
   </li>
-  <li class="nav-item dropdown">
+   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Patient</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="/home/doctorDashboard/addPatient">Add Patient</a>
-      <a class="dropdown-item" href="#">Patient List</a>
-      <a class="dropdown-item" href="#">Add Document</a>
-      <a class="dropdown-item" href="#">Document List</a>
+      <a class="dropdown-item" href="#">View Patient List</a>
         </div>
   </li>
    <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Schedule</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Add Schedule</a>
-      <a class="dropdown-item" href="#">Schedule List</a>
+      <a class="dropdown-item" href="#">View Schedule</a>
         </div>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Appointment</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Add Appointment</a>
       <a class="dropdown-item" href="#">Appointment List</a>
-      <a class="dropdown-item" href="#">Assign To Me</a>
-      <a class="dropdown-item" href="#">Assign By Me</a>
-        </div>
+      <a class="dropdown-item" href="#">Assign to Doctor</a>
+     </div>
   </li>
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Prescription</a>
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Account Manager</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Add Patient Case Study</a>
-      <a class="dropdown-item" href="#">Patient Case Study</a>
-      <a class="dropdown-item" href="#">Add Prescription</a>
-      <a class="dropdown-item" href="#">Prescription List</a>
-        </div>
+      <a class="dropdown-item" href="#">Account List</a>
+      <a class="dropdown-item" href="#">Invoice List</a>
+      <a class="dropdown-item" href="#">Payment List</a>
+      <a class="dropdown-item" href="#">Report</a>
+      <a class="dropdown-item" href="#">Debit Report</a>
+      <a class="dropdown-item" href="#">Credit Report</a>
+     </div>
   </li>
-  <li class="nav-item">
-    <a class="nav-link active" href="#" role="button" aria-haspopup="true" aria-expanded="false">Noticeboard</a>
-  </li> 
+ <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Insurance</a>
+    <div class="dropdown-menu">
+      
+      <a class="dropdown-item" href="#">Insurance List</a>
+      <a class="dropdown-item" href="#">Limit Approval List</a>
+     </div>
+  </li>
   <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Billing</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Add Service</a>
+      <a class="dropdown-item" href="#">Service List</a>
+ <!--      <a class="dropdown-item" href="#">Add Package</a>
+      <a class="dropdown-item" href="#">Package List</a>
+  -->     <a class="dropdown-item" href="#">Patient Addmission List</a>
+      <a class="dropdown-item" href="#">Advance Payment List</a>
+     <a class="dropdown-item" href="#">Bill List</a>
+     </div>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Human Resources</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Add Employee</a>
+      <a class="dropdown-item" href="#">Accountant List</a>
+      <a class="dropdown-item" href="#">Nurse List</a>
+      <a class="dropdown-item" href="#">Receptionist List</a>
+      <a class="dropdown-item" href="#">Doctor List</a>
+     </div>
+  </li>
+<li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Bed Manager</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Bed Assign</a>
+      <a class="dropdown-item" href="#">Bed List</a>
       <a class="dropdown-item" href="#">Bed Assign List</a>
       <a class="dropdown-item" href="#">Report</a>
-        </div>
+     </div>
   </li>
+  
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Messages</a>
     <div class="dropdown-menu">

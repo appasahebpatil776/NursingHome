@@ -7,6 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
+<style>
+         .content {
+         max-width: 100%;
+         margin: auto;
+         background: white;
+         padding: 10px;
+         }
+      </style>
 	<h1>Default Error Handler</h1>
 </body>
 </html>

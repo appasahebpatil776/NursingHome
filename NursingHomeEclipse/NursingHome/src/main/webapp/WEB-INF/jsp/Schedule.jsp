@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,17 +9,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Doctor-Shreepad ENT Hosptital</title>
+<title>Dashboard - Schedule</title>
 </head>
 <body>
-<style>
-         .content {
-         max-width: 100%;
-         margin: auto;
-         background: white;
-         padding: 10px;
-         }
-      </style>
+<div class="container">
 <nav class="navbar navbar-light bg-light justify-content-between">
   <a class="navbar-brand"><img src ="./img/Webp.net-resizeimage (3).png"/></a>
   <form class="form-inline">
@@ -32,12 +23,12 @@
 <nav class="navbar navbar-dark bg-dark">
 <ul class="nav nav-tabs-fill">
   <li class="nav-item">
-    <a class="nav-link active" href="/home/doctorDashboard">Doctor</a>
+    <a class="nav-link active" href="#">Doctor</a>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Patient</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="/home/doctorDashboard/addPatient">Add Patient</a>
+      <a class="dropdown-item" href="#">Add Patient</a>
       <a class="dropdown-item" href="#">Patient List</a>
       <a class="dropdown-item" href="#">Add Document</a>
       <a class="dropdown-item" href="#">Document List</a>
@@ -103,5 +94,61 @@
   </li>
 </ul>
 </nav>
+<br>
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand"><img src ="./img/Webp.net-resizeimage (3).png"/></a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+<br>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>SL.NO</th>
+        <th>Doctor Name</th>
+        <th>Department</th>
+        <th>Day</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Per Patient Time</th>
+        <th>Serial Visibility</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Dr. Aishwarya Kalaskar</td>
+        <td>Microbiology</td>
+        <td>Monday</td>
+        <td>15:00:00</td>
+        <td>17:00:00</td>
+        <td>01:00:00</td>
+        <td>Timestamp</td>
+      </tr>
+    </tbody>
+  </table>
+  
+<br>
+ <nav aria-label="...">
+  <ul class="pagination justify-content-end">
+    <li class="page-item disabled">
+      <span class="page-link">Previous</span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active">
+      <span class="page-link">
+        2
+        <span class="sr-only">(current)</span>
+      </span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+</div>
 </body>
 </html>

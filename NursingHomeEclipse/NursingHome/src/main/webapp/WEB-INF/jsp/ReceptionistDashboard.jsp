@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,19 +9,19 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Doctor-Shreepad ENT Hosptital</title>
+<title>Shreepad ENT Hosptital</title>
 </head>
 <body>
-<style>
-         .content {
-         max-width: 100%;
-         margin: auto;
-         background: white;
-         padding: 10px;
-         }
-      </style>
+<%
+	String employeeId = request.getParameter("employeeId");
+	session.setAttribute("empoyeeId", employeeId);
+	
+	System.out.print("Employee Id ");
+%>
+
 <nav class="navbar navbar-light bg-light justify-content-between">
   <a class="navbar-brand"><img src ="./img/Webp.net-resizeimage (3).png"/></a>
+  <h1>DashBoard</h1>
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -31,54 +29,31 @@
 </nav>
 <nav class="navbar navbar-dark bg-dark">
 <ul class="nav nav-tabs-fill">
-  <li class="nav-item">
-    <a class="nav-link active" href="/home/doctorDashboard">Doctor</a>
-  </li>
-  <li class="nav-item dropdown">
+   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Patient</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="/home/doctorDashboard/addPatient">Add Patient</a>
-      <a class="dropdown-item" href="#">Patient List</a>
-      <a class="dropdown-item" href="#">Add Document</a>
-      <a class="dropdown-item" href="#">Document List</a>
+      <a class="dropdown-item" href="/home/receptionistDashboard/addPatient">Add Patient</a>
+      <a class="dropdown-item" href="/home/receptionistDashboard/viewPatientList">View Patient List</a>
         </div>
   </li>
    <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Schedule</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Add Schedule</a>
-      <a class="dropdown-item" href="#">Schedule List</a>
+      <a class="dropdown-item" href="/home/receptionistDashboard/addSchedule">Add Schedule</a>
+      <a class="dropdown-item" href="/home/receptionistDashboard/viewSchedule">View Schedule</a>
         </div>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Appointment</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Add Appointment</a>
-      <a class="dropdown-item" href="#">Appointment List</a>
-      <a class="dropdown-item" href="#">Assign To Me</a>
-      <a class="dropdown-item" href="#">Assign By Me</a>
-        </div>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Prescription</a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Add Patient Case Study</a>
-      <a class="dropdown-item" href="#">Patient Case Study</a>
-      <a class="dropdown-item" href="#">Add Prescription</a>
-      <a class="dropdown-item" href="#">Prescription List</a>
+      <a class="dropdown-item" href="/home/receptionistDashboard/addAppointment">Add Appointment</a>
+      <a class="dropdown-item" href="/home/receptionistDashboard/appointmentList">Appointment List</a>
         </div>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="#" role="button" aria-haspopup="true" aria-expanded="false">Noticeboard</a>
+    <a class="nav-link active" href="/home/receptionistDashboard/noticeboard" role="button" aria-haspopup="true" aria-expanded="false">Noticeboard</a>
   </li> 
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Bed Manager</a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Bed Assign</a>
-      <a class="dropdown-item" href="#">Bed Assign List</a>
-      <a class="dropdown-item" href="#">Report</a>
-        </div>
-  </li>
+ 
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Messages</a>
     <div class="dropdown-menu">
