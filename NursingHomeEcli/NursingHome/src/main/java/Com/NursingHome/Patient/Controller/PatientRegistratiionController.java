@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import Com.NursingHome.Patient.Entity.PatientClass;
 import Com.NursingHome.Patient.Entity.PatientCredentialInfo;
 import Com.NursingHome.Patient.Entity.PatientDetailInfo;
 import Com.NursingHome.Patient.Service.PatientRegistrationService;
@@ -22,8 +23,9 @@ public class PatientRegistratiionController {
 	public ModelAndView showPatientRegistration(){
 		ModelAndView modelAndView = new ModelAndView();
 		
-		PatientDetailInfo patientDetailInfo = new PatientDetailInfo();
-		modelAndView.addObject("detailInfo", patientDetailInfo);
+		PatientClass patientClass = new PatientClass();
+		
+		modelAndView.addObject("detailInfo", patientClass);
 		
 		modelAndView.setViewName("AddPatient");
 		
@@ -31,9 +33,11 @@ public class PatientRegistratiionController {
 	}
 	
 	@RequestMapping(value="/home/recepitionistDashboard/addPatient", method=RequestMethod.POST)
-	public ModelAndView setPatient(@ModelAttribute PatientDetailInfo detailInfo){
+	public ModelAndView setPatient(@ModelAttribute PatientClass detailInfo){
 		ModelAndView modelAndView = new ModelAndView();
-		PatientCredentialInfo credentialInfo = new PatientCredentialInfo();
+		
+		PatientClass patient = new PatientClass();
+		
 		
 		patientService.insertPatient(detailInfo);
 		
@@ -41,7 +45,6 @@ public class PatientRegistratiionController {
 		
 		System.out.println(detailInfo);
 
-		System.out.println(credentialInfo);
 		
 		return modelAndView;
 	}

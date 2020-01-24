@@ -2,14 +2,14 @@ package Com.NursingHome.Patient.Entity;
 
 public class PatientCredentialInfo {
 
-	private String patientID;
+	private String patientId;
 	private String email;
 	private String password;
-	public String getPatientID() {
-		return patientID;
+	public String getPatientId() {
+		return patientId;
 	}
-	public void setPatientID(String patientID) {
-		this.patientID = patientID;
+	public void setPatientId(String patientID) {
+		this.patientId = patientID;
 	}
 	public String getEmail() {
 		return email;
@@ -25,7 +25,7 @@ public class PatientCredentialInfo {
 	}
 	@Override
 	public String toString() {
-		return "PatientCredentialInfo [patientID=" + patientID + ", email=" + email + ", password=" + password + "]";
+		return "PatientCredentialInfo [patientID=" + patientId + ", email=" + email + ", password=" + password + "]";
 	}
 	
 	
